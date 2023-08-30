@@ -198,6 +198,32 @@ body {
     border-radius: 6px;
     border-left: solid orange 6px;
     box-shadow: 0px 6px 4px -4px gray;
+    display: grid;
+    row-gap: 10px;
+}
+
+.project-card > h1 {
+    margin: 0;
+    font-size: 18px;
+    align-self: end;
+}
+
+.project-card > h4 {
+    margin: 0;
+    font-size: 14px;
+    color: rgb(140, 132, 132);
+    font-weight: lighter;
+}
+
+.project-icons {
+    justify-self: end;
+    align-self: end;
+}
+
+.project-icons > svg {
+    height: 26px;
+    width: 26px;
+    margin-left: 10px;
 }
 
 .content-announcement {
@@ -220,6 +246,34 @@ body {
     padding: 15px;
     border-radius: 6px;
     box-shadow: 0px 6px 4px -4px gray;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.announcement-text {
+    border-bottom: solid lightgray 1px;
+}
+
+.announcement-text:last-child {
+    border-bottom: none;
+}
+
+.announcement-text h1 {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.announcement-text p {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: lighter;
+    color: gray;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .content-trending {
@@ -241,4 +295,35 @@ body {
     padding: 15px;
     border-radius: 6px;   
     box-shadow: 0px 6px 4px -4px gray;
+    display: grid;
+    align-items: center;
+    justify-content: start;
+}
+
+.trending-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
+    align-items: top;
+}
+
+.trending-item svg {
+    height: 50px;
+    width: 50px;
+    grid-column: 1;
+    grid-row: 1 / -1;
+}
+
+.trending-item h1 {
+    margin: 0;
+    font-size: 14px;
+    grid-column: 2;
+    align-self: end;
+}
+
+.trending-item p {
+    margin: 0;
+    font-size: 14px;
+    color: gray;
+    grid-column: 2;
 }
